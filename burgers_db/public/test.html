@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eat-da-Burger!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Wendy+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/burger_style.css">
+</head>
+
+<body>
+
+    <style>
+        html,
+
+        body {
+            height: 100%;
+            background: url("./assets/img/skyBG.jpg")center no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 100%;
+        }
+
+        /*.card {*/
+
+        /*    background-color: rgba(245, 245, 245);*/
+
+        /*}*/
+
+        header {
+            max-width: 100%;
+            margin-top: 3%;
+        }
+
+        img {
+            max-width: 20vw;
+        }
+
+        #textLogo {
+            font-size: 3.5vw;
+            font-family: 'Wendy One', sans-serif;
+            text-shadow: 1px 1px white;
+            font-style: italic;
+
+        }
+
+        #userBurger {
+            font-family: 'Fugaz One', cursive;
+            font-size: 1.8vw;
+        }
+    </style>
+    <!-- Home screen -->
+    <header class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <img href="/test.html" src="./assets/img/burgerLogo.png" alt="Card image cap">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p class="text-center" id="textLogo">EAT-DA-BURGER!</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" id="userBurger">
+                    <div class="card-header text-center">
+                        ADD A BURGER YOU'D LIKE TO DEVOUR HERE!
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group text-center">
+                                <textarea class="form-control" id="burgerInput" rows="1"></textarea>
+                            </div>
+                        </form>
+                        <a href="#" class="btn btn-info" id="burgerSubmit">ADD BURGER</a>
+                    </div>
+                </div>
+            </div>
+            <!--Added burgers will prepend here-->
+            <div class="col-sm-4">
+                <div class="card" id="userBurger">
+                    <div class="card-header text-center">
+                        DEVOUR THOSE BURGERS!
+                    </div>
+                    <div class="card-body" id="preparedBurgers">
+                        <a href="#" class="btn btn-success" id="burgerDevour">DEVOUR!</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Devoured burgers will prepend here -->
+            <!-- <div class=" col-sm-4 "></div> -->
+        </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js " integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js " integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ " crossorigin="anonymous "></script>
+</body>
+
+</html>

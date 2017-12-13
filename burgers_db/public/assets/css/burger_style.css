@@ -1,0 +1,12 @@
+/*html {*/
+
+/*    background-color: green;*/
+
+/*}*/
+
+html,
+body {
+    background: url('./assets/img/skyBG.jpg')center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

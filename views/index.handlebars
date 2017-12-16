@@ -1,0 +1,53 @@
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md col-lg">
+            <div class="card" id="userBurger">
+                <div class="card-header text-center">
+                    ADD A BURGER YOU'D LIKE TO DEVOUR HERE!
+                </div>
+                <div class="card-body">
+                    <form action="/burgers/create" method="POST">
+                        <div class="form-group text-center">
+                            <textarea type="text" class="form-control" name="burger_name" id="burgerInput" rows="1" value=""></textarea>
+                            <button type="submit" class="btn btn-info btn-block" id="burgerSubmit">ADD BURGER</button>
+                            <button type="button" class="btn btn-danger btn-block" id="burgerClear">CLEAR ALL</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Added burgers will prepend here-->
+        <div class="col-sm-12 col-md col-lg" id="preparedBurger" id="toggle">
+            <div class="card">
+                <div class="card-header text-center">
+                    DEVOUR THOSE BURGERS!
+                </div>
+                <div class="card-body" id="cookedBurgers" id="toggleHide">
+                    {{#each burgers}} {{#unless this.devoured}}
+                    <div class="col-sm-12 col-md">
+                        <div>
+                            {{this.id}}: {{this.burger_name}}
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md">
+                        <form class="devourBurgers" class="button-size">
+                            <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+                            <button type="submit" class="btn btn-success btn-block" value={{this.id}}>DEVOUR!</button>
+                        </form>
+                    </div>
+                    {{/unless}} {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Devoured burgers will prepend here -->
+        <div class="col-sm-12 col-md col-lg task" id="devouredBurgers" id="toggle">
+            <div class="card">
+                <div class="card-body" id="eatenBurgers" id="toggleHide">
+                    {{#each burgers}} {{#if devoured}}
+                    <input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly> {{/if}} {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

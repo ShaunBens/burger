@@ -34,11 +34,11 @@ router.put("/burgers/update/:id", function(req, res) {
     });
 });
 
-router.delete("/burgers", function(req, res) {
-    burger.del(function(data) {
-        var hbsObject = { burgers: data };
-        res.render("index", hbsObject);
-    });
-});
+// router.delete("/burgers", function(req, res) {
+//     burger.del(function(data) {
+//         var hbsObject = { burgers: data };
+//         res.render("index", hbsObject);
+//     });
+// });
 
 module.exports = router;
